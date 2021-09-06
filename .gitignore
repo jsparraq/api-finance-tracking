@@ -140,3 +140,5 @@ cython_debug/
 # Auth files
 /src/config/auth/credentials.json
 /src/config/auth/refresh_token.json
+
+./logs

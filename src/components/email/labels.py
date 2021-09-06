@@ -1,11 +1,13 @@
-def get_labels(service):
+from loguru import logger
+
+
+def get_id_label(service, label_name):
     results = service.users().labels().list(userId="me").execute()
     labels = results.get("labels", [])
 
     if not labels:
-        print("No labels found.")
+        logger.error("No labels found.")
     else:
-        print("Labels:")
-        print("---------")
         for label in labels:
-            print(f"{label['name']} --- {label['id']}")
+            if label["name"] == label_name:
+                return label["id"]
