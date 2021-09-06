@@ -2,13 +2,17 @@
 name = "api-finance-tracking"
 version = "0.1.0"
 description = ""
-authors = ["Sebastian Parra Quintero <sebastian.parraq96@gmail.com>"]
+authors = ["Sebastian Parra <sebastian.parra96@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
 google-api-python-client = "^2.17.0"
 google-auth-httplib2 = "^0.1.0"
 google-auth-oauthlib = "^0.4.5"
+pylint = "^2.10.2"
+black = "^21.8b0"
+isort = "^5.9.3"
+autoflake = "^1.4"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
