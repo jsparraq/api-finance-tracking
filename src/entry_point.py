@@ -13,7 +13,7 @@ def main():
         "./src/config/auth/credentials.json", "./src/config/auth/refresh_token.json"
     )
     service = build("gmail", "v1", credentials=credentials)
-    labels.get_labels(service)
+    label_id = labels.get_id_label(service)
 
 
 if __name__ == "__main__":

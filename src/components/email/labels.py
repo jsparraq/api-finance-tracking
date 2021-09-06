@@ -1,7 +1,8 @@
 from loguru import logger
 
 
-def get_id_label(service, label_name):
+def get_id_label(service, label_name: str) -> str:
+    logger.debug("Get labels")
     results = service.users().labels().list(userId="me").execute()
     labels = results.get("labels", [])
 

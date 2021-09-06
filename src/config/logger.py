@@ -4,7 +4,7 @@ from loguru import logger
 LOG_FOLDER = "logs/"
 
 
-def configure_logger(verbosity_level):
+def configure_logger(verbosity_level: int):
     """Configure the logger.
 
     Removes the default logger handler/format and adds a custom one.
@@ -18,7 +18,7 @@ def configure_logger(verbosity_level):
     )
 
 
-def translate_verbosity_level(level):
+def translate_verbosity_level(level: int) -> str:
     """Translates the level of verbosity of the CLI to the expected level of the library
 
     Library default levels:
